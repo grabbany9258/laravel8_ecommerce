@@ -32,3 +32,11 @@ Route::get('/checkout', CheckoutComponent::class);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+// For User & Customer
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+});
+
+// For Admin
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+});
