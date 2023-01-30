@@ -73,7 +73,10 @@
                     <a href="{{ route('product.details', ['slug' => $product->slug]) }}"
                       class="product-name"><span>{{ $product->name }}</span></a>
                     <div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
-                    <a href="#" class="btn add-to-cart">Add To Cart</a>
+                    <a href="#" class="btn add-to-cart"
+                      wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}',{{ $product->regular_price }})">Add
+                      To
+                      Cart</a>
                   </div>
                 </div>
               </li>
@@ -148,10 +151,14 @@
               <li class="list-item"><a class="filter-link " href="#">Printer & Ink</a></li>
               <li class="list-item"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
               <li class="list-item"><a class="filter-link " href="#">Sound & Speaker</a></li>
-              <li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-              <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a></li>
-              <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
-              <li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a></li>
+              <li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a>
+              </li>
+              <li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a>
+              </li>
+              <li class="list-item default-hiden"><a class="filter-link " href="#">CPUs &
+                  Prosecsors</a></li>
+              <li class="list-item default-hiden"><a class="filter-link " href="#">Sound &
+                  Speaker</a></li>
               <li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone &
                   Tablets</a></li>
               <li class="list-item"><a data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>'
@@ -178,7 +185,8 @@
           <div class="widget-content">
             <ul class="list-style vertical-list has-count-index">
               <li class="list-item"><a class="filter-link " href="#">Red <span>(217)</span></a></li>
-              <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a></li>
+              <li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a>
+              </li>
               <li class="list-item"><a class="filter-link " href="#">Black <span>(79)</span></a></li>
               <li class="list-item"><a class="filter-link " href="#">Blue <span>(283)</span></a></li>
               <li class="list-item"><a class="filter-link " href="#">Grey <span>(116)</span></a></li>
