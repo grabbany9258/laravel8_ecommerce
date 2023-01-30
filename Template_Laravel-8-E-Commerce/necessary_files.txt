@@ -1,0 +1,8 @@
+vedio:8 Shopping cart:
+	steps:
+1) composer require hardevine/shoppingcart
+//config->app.php
+2) Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+3) 'Cart'=>Gloudemans\Shoppingcart\Facades\Cart::class,
+4) php artisan vendor:publish --provider="Gloudeman\ShoppingCartServiceProvider" --tag="config"
+	
