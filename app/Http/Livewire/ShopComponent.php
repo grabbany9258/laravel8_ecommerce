@@ -6,9 +6,11 @@ use App\Models\Product;
 use Livewire\Component;
 use Cart;
 use App\Models\Category;
+use Livewire\WithPagination;
 
 class ShopComponent extends Component
 {
+    use WithPagination;
     public $sorting;
     public $pagesize;
 

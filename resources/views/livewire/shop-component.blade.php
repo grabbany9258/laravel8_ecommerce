@@ -83,6 +83,8 @@
         </div>
 
         <div class="wrap-pagination-info">
+
+          {{ $products->links() }}
           {{ $products->links('vendor.pagination.bootstrap-4') }}
           {{-- <ul class="page-numbers">
             <li><span class="page-number-item current">1</span></li>
