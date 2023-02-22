@@ -4,8 +4,14 @@
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            All Products
-
+            <div class="row">
+              <div class="col-md-6">
+                All Product
+              </div>
+              <div class="col-md-6">
+                <a href="{{ route('admin.addproduct') }}" class="btn btn-success pull-right">Add New</a>
+              </div>
+            </div>
           </div>
           <div class="panel-body">
             <table class="table table-striped">
@@ -30,14 +36,15 @@
                     <td>{{ $product->stock_status }}</td>
                     <td>{{ $product->regular_price }}</td>
                     <td>{{ $product->category->name }}</td>
-                    <td>{{ $product->category->name }}</td>
                     <td>{{ $product->created_at }}</td>
                   </tr>
                 @endforeach
               </tbody>
             </table>
-            {{ $products->links() }}
-            {{ $products->links('vendor.pagination.bootstrap-4') }}
+            <div class="d-flex justify-content-end">
+              {{ $products->links() }}
+              {{ $products->links('vendor.pagination.bootstrap-4') }}
+            </div>
 
           </div>
         </div>
